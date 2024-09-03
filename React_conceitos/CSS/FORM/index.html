@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible"/>
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0"/>
+    <title>Formulários</title>
+    <link rel="stylesheet" href="CSS/style.css"/>
+</head>
+<body>
+    <h2>Formulários HTML:</h2>
+    <!--1 - Primeiro formulario-->
+    <!--2 - Atributos do formulário-->
+    <form action="register.php" method="POST">
+        <div>
+            <label>Nome:</label>
+            <input type="text">
+        </div>
+
+        <!--3 - Atributo name-->
+        <div>
+            <!--4 - Atributo label-->
+            <label for="age">Idade:</label>
+            <input type="number" name="age">
+        </div>
+        
+        <!--6 - Select-->
+        <div>
+            <label for="job">Selecionar a sua profissão:</label>
+            <select name="job">
+                <option value="Veterinário">Veterinário</option>
+                <option value="Enfermagem">Enfermagem</option>
+                <option value="Medicina">Medicina</option>
+                <option value="Nutrição">Nutrição</option>
+                <option value="Psicologia">Psicologia</option>
+                <option value="Farmácia">Farmácia</option>
+            </select>
+        </div>
+
+        <!--7 - Atributos Selected-->
+        <div>
+            <label for="contract">Você leu os termos do contrato?</label>
+            <select name="contract">
+                <option value="sim">Sim</option>
+                <option value="nao" selected>Não</option>
+            </select>
+        </div>
+
+        <!--8 - Multiplas opções-->
+        <div>
+            <label for="items">Selecionar os itens desejados:</label>
+            <select name="items" multiple>
+                <option value="arroz">Arroz</option>
+                <option value="feijão">feijão</option>
+                <option value="milho">Milho</option>
+                <option value="carne">Carne</option>
+            </select>
+        </div>
+
+        <!--9 - Textarea-->
+        <div>
+            <label for="comment">Escreva abaixo o que você achou do post:</label>
+            <textarea name="comment"></textarea>
+        </div>
+
+        <!--10 - Fieldset e Legend-->
+        <div>
+            <fieldset>
+                <legend>Preencha as suas informações:</legend>
+                <label for="firstname">Nome:</label>
+                <input type="text" name="firstname">
+                <label for="lastname">Sobrenome:</label>
+                <input type="text" name="lastname">
+            </fieldset>
+        </div>
+
+        <!--11 - Datalist-->
+        <div>
+            <label for="flavor">Escolha o Sabor:</label>
+            <input type="text" list="flavors" name="flavor">
+            <datalist id="flavors">
+                <option value="Cereja"></option>
+                <option value="Morango"></option>
+                <option value="Abacaxi"></option>
+                <option value="Chocolate"></option>
+            </datalist>
+        </div>
+        <!--12 - Senha-->
+         <div>
+            <label for="password">Digite a sua senha:</label>
+            <input type="password" name="password">
+         </div>
+
+         <!--14 - Radio button-->
+         <div>
+            <label for="car_model">Escolar o modelo do seu carro:</label>
+            <div class="radio">
+                <input type="radio" value="volkswagem" name="car_model">
+                <label for="volkswagem">Volkswagem</label>
+            </div>
+            <div class="radio">
+                <input type="radio" value="Fiat" name="car_model">
+                <label for="Fiat">Fiat</label>
+            </div>
+            <div class="radio">
+                <input type="radio" value="chevrolet" name="car_model">
+                <label for="chevrolet">Chevrolet</label>
+            </div>
+        </div>
+
+        <!--15 - Input checkbox-->
+        <div>
+            <label for="otionals">Opcionais do carro:</label>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" vlaue="roda">
+                <label for="roda">Rodas</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" vlaue="Multimidia">
+                <label for="multimidia">Central Multimídia</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" vlaue="camera">
+                <label for="camera">Camera de Ré</label>
+            </div>
+            <div class="radio">
+                <input type="checkbox" name="optionals[]" vlaue="cromado">
+                <label for="cromado">Apliques Cromados e Decoração</label>
+            </div>
+        </div>
+
+         <!--13 - Resetar Form-->
+         <input type="reset" value="Limpar">
+
+        <!-- 5 - Envio de form-->
+        <input type="submit" value="Enviar"/>
+    </form>
+</body>
+
+
+
+</html>
